@@ -1,9 +1,11 @@
 import turtle
+import argparse
 def koch_curve(t, order, size):
     if order == 0:
         t.forward(size)
     else:
-        for angle in():
+        for angle in(60, 120, 60, 0):
+            koch_curve(t, order - 1, size / 2)
             t.left(angle)
 
 def draw_koch_curve(order, size):
@@ -14,6 +16,7 @@ def draw_koch_curve(order, size):
     t.penup()
     t.goto(-size / 2, 0)
     t.pendown()
+    
     koch_curve(t, order, size)
     window.mainloop()
 draw_koch_curve(5)
