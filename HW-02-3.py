@@ -19,4 +19,10 @@ def draw_koch_curve(order, size):
     
     koch_curve(t, order, size)
     window.mainloop()
-draw_koch_curve(5)
+draw_koch_curve()
+
+def parse_arguments():
+    args = parser.parser_args()
+    return args
+    parser = argparse.ArgumentPerser()
+    args = parse_arguments()
