@@ -1,3 +1,4 @@
+
 import queue
 
 request_queue = queue.Queue()
@@ -8,7 +9,6 @@ def generate_request():
     new_request = f"Order №{request_counter}"
     request_queue.put(new_request)
     print(f"Make and add:{new_request}.Queue size:{request_queue.qsize()}")
-
 
 def process_request():
     if not request_queue.empty():
@@ -21,6 +21,25 @@ def process_request():
 
 generate_request()
 process_request()
+
+#####
+
+from collections import deque
+def is_palindrom(text: str) -> bool: 
+    text = text.lower() 
+    d = deque(text)
+    while len(d) > 1:
+        if d.popleft() == d.pop():
+            return True
+        return False
+        
+    print(is_palindrom("level"))
+    print(is_palindrom("hello"))
+        
+
+
+
+
 
 
 
