@@ -15,19 +15,19 @@ def draw_koch_curve(order, size):
     t = turtle.Turtle()
     t.speed(0)
     t.penup()
-    t.goto(-size / 2, size / 3)
+    t.goto(-size / 2, 0)
     t.pendown()
     
     koch_curve(t, order, size)
-    print(The end operation.Pls., closed window and exit)
+    print("the end operation.Pls., closed window and exit")
     window.mainloop()
 def parse_arguments():
-    parser = argparse.ArgumentParser(descroption="__init__")
+    parser = argparse.ArgumentParser(description="koch_curve")
     parser.add_argument("--order" , type=int, default=3,help="3")
-    parser.add_argument("--size", type=float, default=300.0, help=300.0)
+    parser.add_argument("--size", type=float, default="300.0", help="300.0")
     
-    return prse_args()
+    return parser.parse_args()
 if __name__ == "__main__":
     args = parse_arguments()
     draw_koch_curve(args.order, args.size)
-    
+
